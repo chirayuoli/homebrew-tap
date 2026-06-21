@@ -1,26 +1,27 @@
 class Vyer < Formula
   desc "Warm, local-first code-context engine for AI coding agents (MCP server)"
   homepage "https://github.com/chirayuoli/vyer"
-  version "0.1.2"
+  version "0.1.3"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     on_arm do
-      url "https://github.com/chirayuoli/vyer/releases/download/v0.1.2/vyer-v0.1.2-aarch64-apple-darwin.tar.gz"
-      sha256 "f7160a57d57e59a4e342d5e46c4d0abc8a3d203f99795cee12ba00ecc693d29a"
+      url "https://github.com/chirayuoli/vyer/releases/download/v0.1.3/vyer-v0.1.3-aarch64-apple-darwin.tar.gz"
+      sha256 "60217397cdec7b3dd5d8cd9764e9383ba2d1221c9ffbdfa9138363377ff78969"
     end
-    # Intel macOS prebuilt is pending (GitHub's macos-13 runner queue); use `cargo install
-    # --git https://github.com/chirayuoli/vyer vyer-server` on Intel Macs until it lands.
+    # Intel macOS prebuilt is intentionally not shipped (GitHub's macos-13 runner queue is
+    # unreliable). On Intel Macs install from source instead:
+    #   cargo install --git https://github.com/chirayuoli/vyer vyer-server
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/chirayuoli/vyer/releases/download/v0.1.2/vyer-v0.1.2-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "a4fa715a96ec365965b9eb4dc0abd0c4f224234a52f13e392a9d352db1763b6d"
+      url "https://github.com/chirayuoli/vyer/releases/download/v0.1.3/vyer-v0.1.3-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "6f517caabd68ad4e74627f9d03fd539035ad5879e4b11a2ebf12dc0f670bc4e6"
     end
     on_intel do
-      url "https://github.com/chirayuoli/vyer/releases/download/v0.1.2/vyer-v0.1.2-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "bb912adadddd9e9c1226e36074a96232dedab00ecd04e3e32476b6a1f003bc6c"
+      url "https://github.com/chirayuoli/vyer/releases/download/v0.1.3/vyer-v0.1.3-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "ce039fbe229a587b34148f7cf91af0e192afe26110db1888e75cad8479b90c20"
     end
   end
 
